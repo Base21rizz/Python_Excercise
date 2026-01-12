@@ -54,3 +54,9 @@ cube = power(2)(3)
 print(cube)
 two_power_of_five = power(2)(5)
 print(two_power_of_five)
+
+
+# Excercise
+numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
+filtered = [i for i in numbers if i <= 0]
+print(filtered)

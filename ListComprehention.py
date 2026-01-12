@@ -64,3 +64,6 @@ print(filtered)
 list_of_lists = [[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
 output = [item for sublist in list_of_lists for inner in sublist for item in inner]
 print(output)
+
+Pattern = [tuple([n] + [n**i for i in range(6)]) for n in range(11)]
+print(Pattern)

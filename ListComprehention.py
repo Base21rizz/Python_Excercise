@@ -77,3 +77,9 @@ print(output)
 output = [{'Country': val1.upper(), 'City': val2.upper()}
           for sub in countries for val1, val2 in sub]
 print(output)
+
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')],
+         [('Donald', 'Trump')], [('Bill', 'Gates')]]
+output = [name + ' ' + surname
+          for sub in names for name, surname in sub]
+print(output)

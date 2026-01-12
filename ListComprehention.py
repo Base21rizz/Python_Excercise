@@ -67,3 +67,9 @@ print(output)
 
 Pattern = [tuple([n] + [n**i for i in range(6)]) for n in range(11)]
 print(Pattern)
+
+countries = [[('Finland', 'Helsinki')], [
+    ('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+output = [[c.upper(), c[:3].upper(), cap.upper()]
+          for sub in countries for c, cap in sub]
+print(output)

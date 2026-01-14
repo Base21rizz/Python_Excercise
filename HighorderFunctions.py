@@ -135,6 +135,17 @@ def add_two_nums(x, y):
     return int(x) + int(y)
 
 
+# Excercise
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+def is_odd(num):
+    if num % 2 != 0:
+        return True
+    return False
+
 # Main Part
 
 
@@ -184,3 +195,20 @@ print(list(even_numbers))
 # Built-in Higher Order Functions (Reduce)
 total = reduce(add_two_nums, numbers_str)
 print(total)
+
+
+# Excercise
+odd_numbers = filter(is_odd, numbers)
+print(list(odd_numbers))  # Prints the list of odd numbers
+odd_numbers = map(is_odd, numbers)
+# Prints the list of true and false based on the condition provided
+print(list(odd_numbers))
+print('\n')
+for i in countries:
+    print(i, end=' ')
+print('\n')
+for i in names:
+    print(i, end=' ')
+print('\n')
+for i in numbers:
+    print(i, end=' ')

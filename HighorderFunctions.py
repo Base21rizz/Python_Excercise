@@ -1,4 +1,7 @@
 # Functions
+from functools import reduce
+
+
 def sum_numbers(nums):
     return sum(nums)
 
@@ -123,7 +126,18 @@ def is_even(num):
     return False
 
 
+# Built-in Higher Order Functions (Reduce)
+# Syntax map(function, iterable)
+numbers_str = ['1', '2', '3', '4', '5']
+
+
+def add_two_nums(x, y):
+    return int(x) + int(y)
+
+
 # Main Part
+
+
 """ result1 = sum_numbers(1, 2, 3, 4, 5) = 15
     print(result1)
     This is wrong it is here just to understand """
@@ -166,3 +180,7 @@ print(list(numbers_squared_lambda))
 # Built-in Higher Order Functions (Filter)
 even_numbers = filter(is_even, numbers)
 print(list(even_numbers))
+
+# Built-in Higher Order Functions (Reduce)
+total = reduce(add_two_nums, numbers_str)
+print(total)

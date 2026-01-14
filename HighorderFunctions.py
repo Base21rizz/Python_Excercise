@@ -39,6 +39,38 @@ def add_ten():
         return num + ten
     return add
 
+# Without Decorator
+
+
+def greeting():
+    return 'Welcome to python'
+
+
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+# Without Decorator
+
+
+# With Decorator
+'''This decorator function is a higher order function that takes a function as a parameter'''
+
+
+def uppercase_decorator_WD(function):
+    def wrapper_WD():
+        func_WD = function()
+        make_uppercase_WD = func_WD.upper()
+        return make_uppercase_WD
+    return wrapper_WD
+
+
+@uppercase_decorator_WD
+def greeting_WD():
+    return 'Welcome to Python'
+
 
 # Main Part
 """ result1 = sum_numbers(1, 2, 3, 4, 5) = 15
@@ -58,3 +90,11 @@ print(result_FARV(-3))
 closure_result = add_ten()
 print(closure_result(5))  # 15
 print(closure_result(10))  # 20
+
+# Without Decorator
+g = uppercase_decorator(greeting)
+print(g())
+# Without Decorator
+# With Decorator
+print(greeting_WD())
+# With Decorator

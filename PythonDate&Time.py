@@ -32,3 +32,9 @@ time_one = now.strftime("%m/%d/%Y, %H,%M,%S")
 print("time one:", time_one)
 time_two = now.strftime("%d/%m/%Y, %H:%M:%S")
 print("time now:", time_two)
+
+# String to Time Using strptime
+date_string = "5 December, 2019"
+print("date_string =", date_string)
+date_object = datetime.strptime(date_string, "%d %B, %Y")
+print("date_object =", date_object)
